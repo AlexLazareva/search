@@ -18,7 +18,7 @@ export default class Search extends React.Component {
         const { value } = event.target;
 
         const filtered = people.filter((person) => {
-            return person.name.indexOf(value) >= 0;
+            return person.name.toLowerCase().indexOf(value.toLowerCase()) >= 0;
         });
 
         this.setState({ filtered});
